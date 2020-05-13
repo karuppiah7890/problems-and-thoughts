@@ -84,3 +84,98 @@ Which is better (smaller in size together)
 than doing API call for every action - like,
 comment etc. I don't know if it's possible,
 but if it is, I would go for it!
+
+Next thing is how long to store the cache
+in local DB? We chose to retain data for
+30 days. I have to check how we do that.
+I just joined the team. Before asking, I
+was thinking myself, what kind of data
+retention would make sense? Let's say
+30 days is a good number - meaning
+I will have the data of the past
+30 days. Now what? Well, this
+depends on the application and what
+the product wants to support. For
+example, in our use case, for a social
+media app, let's say I'm very active
+usually. And then later, I use
+Digital Wellbeing app and put
+a 0 minutes timer on the app, so
+that I don't use the app for one
+month. Or let's say my Internet is
+broken or my phone's broken or
+something and for some reason,
+I was not online for one month,
+or at the root level - my social
+media app could not connect to it's
+servers for one month, due to some
+reason. But app is present - installed
+and cache is there. Now, after a month,
+which is roughly 30 days, I'm still offline
+and I simply open the app - should I see posts?
+or not? This is a call you can take. Now, if you
+ask me, I would say - why not? I mean, I can't
+go online, but whatever is in my cache - let it
+just be there may be? Let the user have fun
+checking out the posts or whatever? But if we
+want to do that, our retention time of 30 days
+doesn't work out then. As it's already 30 days.
+Then, should we extend that? Will we keep
+extending? I was thinking about - how about
+we get the last active time of the user -
+the last time the user was online - with
+this information - what we can do is -
+we can say - have past 30 days worth of
+cache since the last online active time
+for the user. This way, if the user was
+active in app about two months ago, and
+then was never online, even though they
+had the app, the data in their app will
+be there - it will be data of -
+(last active time - 30 days) to last active time.
+This also means that the app is using up that
+much of the user's phone storage. That's
+also something to note and take a call
+on. May be consider not storing much
+like 30 days that we have, if the user
+hardly checks the app when offline, at
+some point, we can ask the user if they
+want to clear the cache or we can do it
+automatically if we feel we should not
+hog the user's phone storage. Each thing
+has it's pros and cons. So those were my
+thoughts on it. Also, it very much depends
+on the app - for example YouTube, Netflix
+may not want their users to be able to
+download content for offline viewing
+and view offline for a long time.
+Especially given Netflix is a paid service -
+as this can also mean that - the user
+can con / game the system. Let me explain how.
+I'll explain as a timeline
+
+T1: user gets access to Netflix, through some
+way (trial, paid for subscription, etc)
+
+T2: user gets Netflix mobile app, downloads
+some videos for offline watching. and goes
+offline
+
+T3: user still hasn't come online in Netflix.
+Netflix stops the user's service due to some
+reason (deactivation, trial ends, fraud etc)
+
+T4: since user still hasn't come online,
+and the Netflix mobile app is still present
+in their mobile and the downloaded videos are still
+present for offline viewing.
+
+Now, the above is a problem. So, for this reason,
+after some retention period, Netflix invalidates
+the downloaded videos that you have for offline
+viewing and asks you to "renew it" - for which
+you need to come online - that way Netflix can
+validate your subscription and then mark the
+offline downloaded video as valid for viewing
+offline as you still have access.
+I think something similar is present for YouTube.
