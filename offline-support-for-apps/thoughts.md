@@ -179,3 +179,22 @@ validate your subscription and then mark the
 offline downloaded video as valid for viewing
 offline as you still have access.
 I think something similar is present for YouTube.
+
+And in case of Netflix, it will also validate
+if the video you downloaded is valid to
+watch in the country you are present in.
+For example, if you go to some other
+country, say USA, which has content that you cannot
+watch in your country, let's say India, which is
+the case for me, and then you download the
+content when you are present in USA and then
+when you come back to India, after the said
+retention time, it will mark the content as
+invalid and then ask you to renew and while
+renewing, it will also make sure you can still
+watch the content in the country you are
+currently present in. In my case, if I come
+to India after downloading USA only content,
+it will get invalidated later saying I can't
+view it in India. :/ Netflix is too clever :P
+Of course. :P
