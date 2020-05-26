@@ -134,6 +134,7 @@ version in this case.
 Let me show some diagram to you, for the situation I'm talking about -
 
 Mobile App v1 and Backend Service V1
+
 ![mobile-app-and-backend-service](images/mobile-app-and-backend-service.svg "Mobile App and Backend Service")
 
 In the above case, your mobile app and backend service are compatible and the
@@ -180,7 +181,7 @@ image below
 
 Now, we have new version v1.1 for both Mobile App and Backend Service. 
 
-![mobile-app-and-backend-service-different-versions](mobile-app-and-backend-service-different-versions.svg "Mobile App and Backend Service Different Versions")
+![mobile-app-and-backend-service-different-versions](images/mobile-app-and-backend-service-different-versions.svg "Mobile App and Backend Service Different Versions")
 
 Now, let me give you very specific example so that it's more clear to you, which
 is important for the next concept I'm going to talk about.
@@ -337,7 +338,7 @@ for creating posts and what not. Only comment endpoint is present under `v2`.
 
 It will look like this
 
-![mobile-app-and-backend-service-different-versions-v1-v2](mobile-app-and-backend-service-different-versions-v1-v2.svg "Mobile App and Backend Service Different Versions v1 v2")
+![mobile-app-and-backend-service-different-versions-v1-v2](images/mobile-app-and-backend-service-different-versions-v1-v2.svg "Mobile App and Backend Service Different Versions v1 v2")
 
 Also, for this whole thing to work, now you gotta make sure that there are no
 disruptions to the users, so, when a user from old mobile app comments, the
