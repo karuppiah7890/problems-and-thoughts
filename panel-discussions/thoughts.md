@@ -48,3 +48,7 @@ topics to choose from.
 
 3. Idea: Discuss with people who know marketing well and see how such stuff is
 handled.
+
+---
+
+https://blog.addgene.org/how-to-5-steps-to-a-great-panel-discussion
