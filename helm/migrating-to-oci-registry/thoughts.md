@@ -23,3 +23,22 @@ Screenshots of the conversation are below
 
 I was thinking if I should create a tool to help people download all their
 charts in the chart repo and migrate it to a OCI registry ;) Let's see :)
+
+---
+
+The input to this tool would be - which repo to migrate and to which OCI
+registry.
+
+For example, it could be like
+
+```bash
+$ helm oci-migrator migrate <repo-name|repo-url> <oci-url>
+$ # example
+$ helm oci-migrator migrate stable localhost:5000
+```
+
+This will push each chart as an image which will look like
+`localhost:5000/<chart-name>:<chart-version>`
+
+References:
+https://karuppiah7890.github.io/blog/posts/helm-3-charts-and-oci-registries/
